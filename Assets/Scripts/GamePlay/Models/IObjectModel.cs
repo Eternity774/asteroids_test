@@ -11,5 +11,6 @@ namespace GamePlay.Models
         Vector2 Position { get; set; }
         Vector2 Forward { get; set; }
         Quaternion Rotation { get; set; }
+        
     }
 }

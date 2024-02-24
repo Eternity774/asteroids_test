@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
   _maxSpeed: 2
-  _acceleration: 0.5
-  _deceleration: 0.5
-  _rotationRate: 3
-  _shootCooldown: 1
+  _acceleration: 2
+  _deceleration: 3
+  _rotationRate: 150
+  _shootCooldown: 0.35
+  _bulletSpeed: 3
   _laserCooldown: 3
+  _maxLaserCharges: 3

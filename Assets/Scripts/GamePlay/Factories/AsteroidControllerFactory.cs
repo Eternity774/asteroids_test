@@ -8,8 +8,7 @@ namespace GamePlay.Factories
     {
         public override IObjectController Create(IObjectModel model, IObjectView view)
         {
-            Controller = new AsteroidController();
-            return Controller;
+            return new AsteroidController(model, view);
         }
     }
 }

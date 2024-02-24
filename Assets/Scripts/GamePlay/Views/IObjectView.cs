@@ -5,9 +5,11 @@ namespace GamePlay.Views
 {
     public interface IObjectView
     {
-        Vector2 Position { set; }
+        event Action<Collision2D> OnCollision;
+        Vector2 Position { get; set; }
         Quaternion Rotation { set; }
-        
+
+        GameObject GetGameObject();
         Vector2 GetForward();
     }
 }

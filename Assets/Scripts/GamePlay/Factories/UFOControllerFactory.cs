@@ -6,11 +6,11 @@ namespace GamePlay.Factories
 {
     public class UFOControllerFactory : ObjectControllerFactory
     {
-
+        public IObjectModel Player { get; set; }
+        
         public override IObjectController Create(IObjectModel model, IObjectView view)
         {
-            Controller = new UFOController();
-            return Controller;
+            return new UFOController(model, view, Player);
         }
     }
 }

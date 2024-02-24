@@ -9,8 +9,11 @@ namespace GamePlay.Views
         public event Action<Vector2> OnMoveInput;
         public event Action OnShootInput;
         public event Action OnLaserInput;
+        public event Action<Collision2D> OnCollision;
 
-        public Vector2 Position {
+        public Vector2 Position
+        {
+            get => transform.position;
             set
             {
                 transform.position = value;
@@ -38,7 +41,12 @@ namespace GamePlay.Views
             InitShootInput();
             InitLaserInput();
         }
-        
+
+        public GameObject GetGameObject()
+        {
+            return gameObject;
+        }
+
         public Vector2 GetForward()
         {
             return transform.up;
@@ -137,12 +145,23 @@ namespace GamePlay.Views
         
         private void OnShootAction(InputAction.CallbackContext context)
         {
-            
+            if (context.performed)
+            {
+                OnShootInput?.Invoke();
+            }
         }
         
         private void OnLaserAction(InputAction.CallbackContext context)
         {
-            
+            if (context.performed)
+            {
+                OnLaserInput?.Invoke();
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            OnCollision?.Invoke(other);
         }
 
         private void OnDestroy()
