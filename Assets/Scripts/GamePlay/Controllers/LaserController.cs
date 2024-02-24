@@ -25,11 +25,6 @@ namespace GamePlay.Controllers
             OnDie?.Invoke(this, _view, silent);
         }
 
-        public void Clear()
-        {
-            
-        }
-
         public LaserController(IObjectModel model, IObjectView view)
         {
             _model = model;
