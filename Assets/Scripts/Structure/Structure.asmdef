@@ -1,0 +1,16 @@
+{
+    "name": "Structure",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3d9f26b3431f34b418323b27b21c16ce"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
